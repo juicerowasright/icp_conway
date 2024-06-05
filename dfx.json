@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "conway_game_of_life_backend": {
+      "main": "src/conway_game_of_life_backend/main.mo",
+      "type": "motoko"
+    },
+    "conway_game_of_life_frontend": {
+      "dependencies": [
+        "conway_game_of_life_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/conway_game_of_life_frontend/src/index.html"
+      },
+      "source": [
+        "src/conway_game_of_life_frontend/assets",
+        "dist/conway_game_of_life_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
